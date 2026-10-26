@@ -1,6 +1,10 @@
-import {readFile,writeFile} from 'node:fs/promises';
+import {readFile,writeFile,cp} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
 import {validate} from './dist/engine.js';
 const data=JSON.parse(await readFile(new URL('./dist/data.json',import.meta.url)));
 validate(data);
-await writeFile(new URL('./dist/README.md',import.meta.url),await readFile(new URL('./README.md',import.meta.url)));
+execFileSync(process.execPath,['--check',fileURLToPath(new URL('./dist/app.js',import.meta.url))]);
+await writeFile(new URL('./dist/README.md',import.meta.url),(await readFile(new URL('./README.md',import.meta.url),'utf8')).replaceAll('](dist/',']('));
+await cp(new URL('./docs/',import.meta.url),new URL('./dist/docs/',import.meta.url),{recursive:true});
 console.log('Static site validated; dist/ is ready.');

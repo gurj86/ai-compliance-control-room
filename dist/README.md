@@ -4,6 +4,10 @@
 
 A working compliance control room demonstrating business analysis, compliance transformation and governed AI workflow design for UK regulated financial services.
 
+**[Open the live control room](https://gurjit-compliance-control-room.onrender.com)** · **[Recruiter introduction](https://gurjit-compliance-control-room.onrender.com/#about)**
+
+![Compliance control room: synthetic oversight metrics, risk map and action queue](docs/control-room.jpg)
+
 > **Portfolio prototype. All firm details, people/roles, records, outcomes, evidence and regulatory scenarios are fictional. Not production compliance tooling, legal/regulatory advice or an actual SMF16 system.**
 
 ## Career positioning
@@ -47,9 +51,13 @@ The user-supplied UpCredit Senior Compliance Lead advert was the design blueprin
 
 The risk matrix is interactive. Selecting a risk opens a relationship view connecting **theme → business area → control → findings → evidence**. The monitoring calendar supports October/November and review drill-down. Search and filters support the finding register and the full action queue.
 
+![Risk-to-control-to-finding trace](docs/risk-trace.jpg)
+
+![Draft monthly management briefing with source references and human review](docs/monthly-brief.jpg)
+
 ## Data & deterministic calculations
 
-The entire fictional dataset is in [`dist/data.json`](dist/data.json). The demo clock is fixed at **26 October 2026**, avoiding drifting overdue counts. September is the comparison period; October is a snapshot, not a complete month. Seed records are never submitted to external services.
+The entire fictional dataset is in [`dist/data.json`](data.json). The demo clock is fixed at **26 October 2026**, avoiding drifting overdue counts. September is the comparison period; October is a snapshot, not a complete month. Seed records are never submitted to external services.
 
 `dist/engine.js` supplies the dashboard, queues and briefing with the same functions:
 
@@ -80,7 +88,7 @@ flowchart LR
   H -. Numeric validation / source references .-> E
 ```
 
-**Current implementation:** dependency-free HTML/CSS/JavaScript, static JSON, pure metric functions and in-memory session state. Node's built-in HTTP server serves the static files on Render. No API keys, customer data, analytics trackers, external fonts, user accounts, database or live model. Reload/reset clears demo decisions. Export preserves a reviewable copy only; it is not a tamper-evident audit record.
+**Current implementation:** dependency-free HTML/CSS/JavaScript, static JSON, pure metric functions and in-memory session state. Render static hosting serves the public site. Node's built-in HTTP server supports local preview. No API keys, customer data, analytics trackers, external fonts, user accounts, database or live model. Reload/reset clears demo decisions. Export preserves a reviewable copy only; it is not a tamper-evident audit record.
 
 **Future production architecture (not implemented):** authenticated role-based reviewer permissions, durable evidence storage, immutable audit events, data quality reconciliations, record-level lineage, access/retention controls, independent review, specialist-approved regulatory taxonomy and validated integration interfaces. A proper reasonable-steps evidence framework would require accountable roles, scope, decisions, challenge, follow-through and qualified review; this prototype is not sufficient to establish it.
 
@@ -90,7 +98,7 @@ See [`docs/requirements.md`](docs/requirements.md) for requirements traceability
 
 ## Run & verify
 
-Requires Node 20+ (Node 22 recommended). No dependency installation is needed.
+Requires Node 22 (the deployment runtime is pinned to the Node 22 major version). No dependency installation is needed.
 
 ```sh
 npm test
@@ -106,7 +114,9 @@ Tests independently reconcile fixture totals and prior-period results, exercise 
 
 GitHub repository: https://github.com/gurj86/ai-compliance-control-room
 
-`render.yaml` defines a separate free Node web service. In Render, choose **New Web Service → Public Git Repository**, use this repo, build `npm run build`, start `npm start`, select a free instance and deploy. Alternatively import the Blueprint. No environment secrets are required. Free instance cold starts may affect first load.
+Live site: https://gurjit-compliance-control-room.onrender.com
+
+`render.yaml` defines a separate static site. In Render, choose **New Static Site → Public Git Repository**, use this repo, build `node build.mjs`, publish directory `dist`, and deploy. Alternatively import the Blueprint. No environment secrets are required. The deployed static site avoids web-service cold starts.
 
 ## Known limitations
 
