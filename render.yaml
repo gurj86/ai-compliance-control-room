@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: gurjit-compliance-control-room
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: 22

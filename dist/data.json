@@ -1,0 +1,69 @@
+{
+  "meta":{"asOf":"2026-10-26","previousAsOf":"2026-09-30","period":"October 2026","classification":"FICTIONAL / SYNTHETIC","version":"demo-1.0","organisation":"Northstar Finance — fictional firm"},
+  "risks":[
+    {"id":"R01","name":"Vulnerable customer support","area":"Customer Operations","likelihood":4,"impact":5,"previousScore":16,"owner":"Customer Outcomes Lead","theme":"Consumer Duty"},
+    {"id":"R02","name":"Complaint resolution quality","area":"Complaints","likelihood":4,"impact":4,"previousScore":12,"owner":"Complaints Lead","theme":"Consumer Duty"},
+    {"id":"R03","name":"Affordability evidence","area":"Credit & Product","likelihood":3,"impact":5,"previousScore":15,"owner":"Credit Risk Lead","theme":"Lending"},
+    {"id":"R04","name":"Personal data handling","area":"Technology","likelihood":3,"impact":4,"previousScore":9,"owner":"Privacy Lead","theme":"Privacy"},
+    {"id":"R05","name":"Screening exceptions","area":"Financial Crime","likelihood":3,"impact":4,"previousScore":12,"owner":"Financial Crime Lead","theme":"Financial Crime"},
+    {"id":"R06","name":"Investment journey clarity","area":"Investments","likelihood":2,"impact":4,"previousScore":12,"owner":"Investment Operations Lead","theme":"Customer understanding"}
+  ],
+  "controls":[
+    {"id":"C01","riskId":"R01","name":"Support-needs capture & referral","tested":40,"failed":9,"date":"2026-10-12"},
+    {"id":"C02","riskId":"R02","name":"Complaint root-cause QA","tested":35,"failed":7,"date":"2026-10-09"},
+    {"id":"C03","riskId":"R03","name":"Affordability rationale review","tested":30,"failed":4,"date":"2026-10-16"},
+    {"id":"C04","riskId":"R04","name":"Data access & retention review","tested":25,"failed":3,"date":"2026-10-20"},
+    {"id":"C05","riskId":"R05","name":"Screening exception reconciliation","tested":30,"failed":2,"date":"2026-10-21"},
+    {"id":"C06","riskId":"R06","name":"Journey disclosure outcome testing","tested":40,"failed":2,"date":"2026-10-23"}
+  ],
+  "findings":[
+    {"id":"F01","controlId":"C01","title":"Support needs not carried into collections","severity":"High","owner":"Customer Outcomes Lead","due":"2026-10-19","opened":"2026-09-15","status":"Open","evidence":[],"reviewed":false,"rootCause":"Journey hand-off lacks a mandatory support flag","action":"Introduce hand-off validation and retest 20 journeys"},
+    {"id":"F02","controlId":"C02","title":"Complaint root causes recorded inconsistently","severity":"High","owner":"Complaints Lead","due":"2026-10-23","opened":"2026-10-09","status":"Open","evidence":[],"reviewed":false,"rootCause":"Inconsistent taxonomy and coaching","action":"Agree taxonomy, coach reviewers and independently sample outcomes"},
+    {"id":"F03","controlId":"C03","title":"Affordability rationale missing in sampled files","severity":"High","owner":"Credit Risk Lead","due":"2026-11-06","opened":"2026-10-16","status":"Open","evidence":[],"reviewed":false,"rootCause":"Decision rationale not consistently retained","action":"Add mandatory rationale and test an independent sample"},
+    {"id":"F04","controlId":"C04","title":"Retention exception log awaiting validation","severity":"Medium","owner":"Privacy Lead","due":"2026-10-22","opened":"2026-10-20","status":"Evidence submitted","evidence":[{"id":"E04","title":"Demo retention exception reconciliation","detail":"Fictional reconciliation: 25 records reviewed, 3 exceptions corrected. Independent retest and scope assessment remain outstanding.","submittedBy":"Privacy Lead","date":"2026-10-23"}],"reviewed":true,"rootCause":"Legacy retention tags","action":"Independently validate corrected tags before closure"},
+    {"id":"F05","controlId":"C05","title":"Screening queue ownership unclear","severity":"Medium","owner":"Financial Crime Lead","due":"2026-10-30","opened":"2026-10-21","status":"Open","evidence":[],"reviewed":false,"rootCause":"No named deputy for exceptions","action":"Assign ownership and independently reconcile queue"},
+    {"id":"F06","controlId":"C06","title":"Disclosure comprehension check incomplete","severity":"Medium","owner":"Investment Operations Lead","due":"2026-10-21","opened":"2026-09-21","status":"Closed","evidence":[{"id":"E06","title":"Demo disclosure retest and reviewer decision","detail":"Fictional independent retest: all 20 sampled journeys included a comprehension check. Closure rationale: design and operation retested within the defined scope.","submittedBy":"Investment Operations Lead","date":"2026-10-20"}],"reviewed":true,"closedAt":"2026-10-21","approvedBy":"Demo Assurance Reviewer","rootCause":"Checklist wording","action":"Update checklist and retest"},
+    {"id":"F07","controlId":"C01","title":"Vulnerability QA calibration not evidenced","severity":"Medium","owner":"Customer Outcomes Lead","due":"2026-11-03","opened":"2026-10-12","status":"Open","evidence":[],"reviewed":false,"rootCause":"Calibration records incomplete","action":"Record calibration rationale and disagreement resolution"},
+    {"id":"F08","controlId":"C02","title":"Remediation letters lacked clear next steps","severity":"Low","owner":"Complaints Lead","due":"2026-10-15","opened":"2026-09-22","status":"Closed","evidence":[{"id":"E08","title":"Demo letter quality retest","detail":"Fictional sample: 15 of 15 letters passed the revised next-steps checklist. Scope excludes other communication types.","submittedBy":"Complaints Lead","date":"2026-10-14"}],"reviewed":true,"closedAt":"2026-10-15","approvedBy":"Demo Assurance Reviewer","rootCause":"Template gap","action":"Revise template and independently retest"}
+  ],
+  "monitoring":[
+    {"id":"M01","name":"Vulnerability & collections thematic","controlId":"C01","start":"2026-10-05","end":"2026-10-12","owner":"Demo Monitoring Analyst","status":"Complete"},
+    {"id":"M02","name":"Complaint outcomes review","controlId":"C02","start":"2026-10-06","end":"2026-10-09","owner":"Demo QA Reviewer","status":"Complete"},
+    {"id":"M03","name":"Affordability evidence review","controlId":"C03","start":"2026-10-12","end":"2026-10-16","owner":"Demo Monitoring Analyst","status":"Complete"},
+    {"id":"M04","name":"Retention control testing","controlId":"C04","start":"2026-10-19","end":"2026-10-20","owner":"Demo Privacy Reviewer","status":"Complete"},
+    {"id":"M05","name":"Screening exception review","controlId":"C05","start":"2026-10-20","end":"2026-10-21","owner":"Demo Monitoring Analyst","status":"Complete"},
+    {"id":"M06","name":"Investment journey outcome test","controlId":"C06","start":"2026-10-22","end":"2026-10-23","owner":"Demo QA Reviewer","status":"Complete"},
+    {"id":"M07","name":"Pensions transfer communications","controlId":"C06","start":"2026-10-27","end":"2026-11-04","owner":"Demo QA Reviewer","status":"Planned"},
+    {"id":"M08","name":"Support-needs independent retest","controlId":"C01","start":"2026-11-02","end":"2026-11-06","owner":"Demo Assurance Reviewer","status":"Planned"}
+  ],
+  "outcomes":[
+    {"id":"O01","month":"2026-09","journey":"Lending","qaTested":60,"qaPassed":52,"complaints":18,"upheld":9,"vulnerableTested":20,"vulnerableGood":16,"rootCause":"Support hand-off","commentary":"Fictional baseline: hand-off and explanation quality require closer sampling."},
+    {"id":"O02","month":"2026-09","journey":"Pensions","qaTested":45,"qaPassed":42,"complaints":8,"upheld":3,"vulnerableTested":10,"vulnerableGood":9,"rootCause":"Communication clarity","commentary":"Fictional baseline: transfer updates lacked clear next steps."},
+    {"id":"O03","month":"2026-09","journey":"Investments","qaTested":40,"qaPassed":36,"complaints":6,"upheld":2,"vulnerableTested":10,"vulnerableGood":9,"rootCause":"Disclosure clarity","commentary":"Fictional baseline: comprehension checks require retest."},
+    {"id":"O04","month":"2026-10","journey":"Lending","qaTested":60,"qaPassed":47,"complaints":25,"upheld":14,"vulnerableTested":20,"vulnerableGood":13,"rootCause":"Support hand-off","commentary":"Fictional sample suggests support hand-offs need priority review; the sample does not establish population-wide harm."},
+    {"id":"O05","month":"2026-10","journey":"Pensions","qaTested":45,"qaPassed":41,"complaints":10,"upheld":4,"vulnerableTested":10,"vulnerableGood":8,"rootCause":"Communication clarity","commentary":"Fictional sample indicates communication delays; investigate journey and cohort differences."},
+    {"id":"O06","month":"2026-10","journey":"Investments","qaTested":40,"qaPassed":38,"complaints":5,"upheld":1,"vulnerableTested":10,"vulnerableGood":9,"rootCause":"Disclosure clarity","commentary":"Fictional sample improved following checklist changes; monitor sustainability."}
+  ],
+  "changes":[
+    {"id":"RC01","title":"DEMO scenario: enhanced support journey expectations","source":"Invented training scenario — no FCA publication","published":"2026-10-08","riskId":"R01","products":"Consumer lending / collections","impact":"Assess support flag continuity, training and QA sampling","action":"Draft impact assessment and obtain compliance interpretation review","owner":"Demo Regulatory Change Lead","due":"2026-11-05","status":"Interpretation pending","approved":false},
+    {"id":"RC02","title":"DEMO scenario: customer communication evidence refresh","source":"Invented training scenario — no FCA publication","published":"2026-10-14","riskId":"R06","products":"Pensions / investment communications","impact":"Map disclosure evidence and customer comprehension checks","action":"Review communication inventory and agree proportionate testing","owner":"Demo Product Lead","due":"2026-11-12","status":"Impact assessment","approved":false},
+    {"id":"RC03","title":"DEMO scenario: privacy incident governance review","source":"Invented training scenario — no ICO publication","published":"2026-10-19","riskId":"R04","products":"Digital onboarding / data handling","impact":"Review incident escalation and evidence of decisions","action":"Obtain privacy specialist assessment before implementation","owner":"Demo Privacy Lead","due":"2026-11-09","status":"Interpretation pending","approved":false}
+  ],
+  "privacy":[
+    {"id":"P01","type":"DPIA-style assessment","title":"Digital onboarding journey","owner":"Demo Privacy Lead","due":"2026-10-30","status":"Specialist review","risk":"Purpose, minimisation and retention assumptions need validation","action":"Record specialist assessment before design sign-off","riskId":"R04"},
+    {"id":"P02","type":"DSAR tracking scenario","title":"Fictional access request DS-002","owner":"Demo Data Rights Analyst","due":"2026-10-23","status":"Open","risk":"Internal target missed; legal deadline assessment not modelled","action":"Escalate to privacy specialist; confirm scope and applicable deadline","riskId":"R04"},
+    {"id":"P03","type":"Data incident scenario","title":"Misdirected fictional servicing letter","owner":"Demo Incident Lead","due":"2026-10-27","status":"Triage","risk":"Potential disclosure requires specialist assessment","action":"Contain, preserve facts and obtain reportability decision; no automatic determination","riskId":"R04"}
+  ],
+  "fincrime":[
+    {"id":"FC01","type":"AML oversight","title":"Periodic review backlog","owner":"Demo Financial Crime Lead","due":"2026-10-29","status":"Open","risk":"Review prioritisation needs specialist validation","action":"Reconcile backlog and refer risk-based decisions to specialist","riskId":"R05"},
+    {"id":"FC02","type":"Sanctions oversight","title":"Screening exception ownership","owner":"Demo Screening Lead","due":"2026-10-30","status":"Open","risk":"Exception queue ownership unclear","action":"Document owner, deputy and specialist escalation; linked finding F05","riskId":"R05"},
+    {"id":"FC03","type":"Fraud oversight","title":"Customer journey exception themes","owner":"Demo Fraud Lead","due":"2026-11-03","status":"Review pending","risk":"Customer friction and fraud referrals need joint review","action":"Review aggregate themes with specialists; no customer decision automation","riskId":"R05"}
+  ],
+  "attestations":[
+    {"id":"AT01","title":"Monitoring findings completeness","owner":"Demo Monitoring Lead","due":"2026-10-25","status":"Pending","evidence":"Reconcile monitoring plan M01–M08 to finding register F01–F08"},
+    {"id":"AT02","title":"Customer outcomes MI validation","owner":"Demo Outcomes Lead","due":"2026-10-28","status":"Pending","evidence":"Review sample denominators O01–O06 and commentary limitations"}
+  ],
+  "issues":[
+    {"id":"I01","title":"Support journey control exception","riskId":"R01","findingId":"F01","classification":"Potential conduct issue — specialist assessment pending","owner":"Demo Compliance Reviewer","due":"2026-10-27","status":"Review pending","action":"Assess scope, potential harm and escalation; no automated breach or notification conclusion"}
+  ]
+}
