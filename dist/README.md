@@ -16,7 +16,7 @@ Gurjit's practical experience across remediation, Consumer Duty, complaints, out
 
 **Gurjit does not claim SMF16 status, Head of Compliance accountability, formal second-line leadership responsibility, direct GDPR operational experience or expert financial-crime practice.** The senior oversight view is inspired by the information and controls a compliance function may need, not a representation that he has performed the accountable role.
 
-The user-supplied UpCredit Senior Compliance Lead advert was the design blueprint for monitoring, advisory-style assessment, customer outcomes, privacy, governance and regulatory change. The project is independent, with no UpCredit affiliation or endorsement. The supplied advert, rather than a claim of ongoing vacancy availability, is the design input.
+The project uses **Consumer Credit Compliance** as a generic sector description and explores practical UK financial-services oversight needs across monitoring, impact assessment, customer outcomes, privacy, governance and regulatory change. It is an independent portfolio demonstration grounded in operational experience and fictional scenarios.
 
 ## Recruiter walkthrough — three minutes
 

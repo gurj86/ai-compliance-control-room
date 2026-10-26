@@ -1,6 +1,6 @@
 # Requirements, controls and acceptance evidence
 
-The brief and supplied job advert define the scope. This is a BA/compliance-transformation portfolio prototype, not a replacement for qualified compliance advice.
+The project brief and practical UK financial-services oversight workflows define the scope. This is a BA/compliance-transformation portfolio prototype, not a replacement for qualified compliance advice.
 
 | Need | Data / workflow | Acceptance evidence |
 | --- | --- | --- |
